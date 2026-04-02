@@ -2,8 +2,8 @@
 int gcdmain(int a, int b){
     while(b!=0){
         int temp=b;
-        a=a%b;
-        temp=a;
+        b=a%b;
+        a=temp;
     }
     return a;
 }
