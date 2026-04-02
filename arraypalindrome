@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num, temp;
+    int digits[4]={0};
+
+    printf("Enter a 4-digit number: ");
+    scanf("%d", &num);
+
+    temp = num;
+    for (int i = 3; i >= 0; i--) {
+        digits[i] = temp % 10;
+        temp /= 10;
+    }
+
+    if (digits[2] == digits[1] && digits[0] == digits[3]) {
+        printf("%d is a palindrome.\n", num);
+    } else {
+        printf("%d is not a palindrome.\n", num);
+    }
+
+    return 0;
+}
